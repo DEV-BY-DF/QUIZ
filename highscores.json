@@ -1,12 +1,12 @@
 [
   {
-    "name": "genuis9000",
+    "name": "ddd",
     "score": 5,
     "total": 5,
     "percentage": 100.0,
     "category": "Planen, Vorbereiten und Durchführen von Arbeitsaufgaben",
-    "time_taken": 57.1,
-    "date": "30.07.2025 17:52"
+    "time_taken": 26.4,
+    "date": "01.08.2025 11:13"
   },
   {
     "name": "hans",
@@ -18,6 +18,33 @@
     "date": "01.08.2025 10:42"
   },
   {
+    "name": "dr jones",
+    "score": 5,
+    "total": 5,
+    "percentage": 100.0,
+    "category": "Auftragsabschluss und Leistungserbringung",
+    "time_taken": 44.1,
+    "date": "01.08.2025 11:16"
+  },
+  {
+    "name": "genuis9000",
+    "score": 5,
+    "total": 5,
+    "percentage": 100.0,
+    "category": "Planen, Vorbereiten und Durchführen von Arbeitsaufgaben",
+    "time_taken": 57.1,
+    "date": "30.07.2025 17:52"
+  },
+  {
+    "name": "si",
+    "score": 9,
+    "total": 10,
+    "percentage": 90.0,
+    "category": "Planen, Vorbereiten und Durchführen von Arbeitsaufgaben",
+    "time_taken": 102.3,
+    "date": "01.08.2025 11:51"
+  },
+  {
     "name": "genius9999",
     "score": 4,
     "total": 5,
@@ -25,6 +52,15 @@
     "category": "IT-Sicherheit und Datenschutz, Ergonomie",
     "time_taken": 30.2,
     "date": "30.07.2025 17:53"
+  },
+  {
+    "name": "idk",
+    "score": 4,
+    "total": 5,
+    "percentage": 80.0,
+    "category": "IT-Sicherheit und Datenschutz, Ergonomie",
+    "time_taken": 40.4,
+    "date": "01.08.2025 10:46"
   },
   {
     "name": "Dennis",
@@ -36,12 +72,12 @@
     "date": "31.07.2025 08:59"
   },
   {
-    "name": "idk",
-    "score": 4,
+    "name": "depp",
+    "score": 1,
     "total": 5,
-    "percentage": 80.0,
-    "category": "IT-Sicherheit und Datenschutz, Ergonomie",
-    "time_taken": 40.4,
-    "date": "01.08.2025 10:46"
+    "percentage": 20.0,
+    "category": "Planen, Vorbereiten und Durchführen von Arbeitsaufgaben",
+    "time_taken": 23.5,
+    "date": "01.08.2025 11:00"
   }
 ]

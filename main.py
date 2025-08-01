@@ -12,58 +12,75 @@ from PIL import Image, ImageTk
 ctk.set_appearance_mode("System")
 ctk.set_default_color_theme("blue")
 
-# Fragenkategorien für IT-Berufe
-quiz_categories = {
-    "Planen, Vorbereiten und Durchführen von Arbeitsaufgaben": [
-        {"frage": "Welche Methode wird häufig für die Projektplanung verwendet?", "auswahl": ["Wasserfallmodell", "Scrum", "Beides", "Keine"], "antwort": "Beides"},
-        {"frage": "Was ist ein wichtiger Bestandteil der Arbeitsvorbereitung?", "auswahl": ["Ressourcenplanung", "Kaffeepause", "Social Media", "Chatten"], "antwort": "Ressourcenplanung"},
-        {"frage": "Welches Dokument beschreibt die Vorgehensweise bei einem Projekt?", "auswahl": ["Projektplan", "Einkaufsliste", "Speiseplan", "Wetterbericht"], "antwort": "Projektplan"},
-        {"frage": "Was gehört zur Auftragsdurchführung?", "auswahl": ["Zeiterfassung", "Urlaubsplanung", "Kaffeekochen", "Shoppen"], "antwort": "Zeiterfassung"},
-        {"frage": "Welche Rolle ist typisch für einen Projektleiter?", "auswahl": ["Koordination", "Kassieren", "Putzen", "Kochen"], "antwort": "Koordination"}
-    ],
-    "Informieren und Beraten von Kunden und Kundinnen": [
-        {"frage": "Was ist bei einer Kundenberatung wichtig?", "auswahl": ["Aktives Zuhören", "Reden ohne Pause", "Technischer Jargon", "Ignorieren der Wünsche"], "antwort": "Aktives Zuhören"},
-        {"frage": "Wie sollte man technische Informationen an Kunden weitergeben?", "auswahl": ["Verständlich und einfach", "Hochkomplex", "Fachchinesisch", "Mit vielen Abkürzungen"], "antwort": "Verständlich und einfach"},
-        {"frage": "Welche Fähigkeit ist für Kundenberatung entscheidend?", "auswahl": ["Empathie", "Arroganz", "Unfreundlichkeit", "Uninteressiertheit"], "antwort": "Empathie"},
-        {"frage": "Was gehört zur Kundeninformation?", "auswahl": ["Produktdatenblätter", "Geheime Unterlagen", "Private Daten", "Konkurrenzgeheimnisse"], "antwort": "Produktdatenblätter"},
-        {"frage": "Wie geht man mit Kundenbeschwerden um?", "auswahl": ["Konstruktiv und lösungsorientiert", "Ablehnend", "Ignorierend", "Aggressiv"], "antwort": "Konstruktiv und lösungsorientiert"}
-    ],
-    "Beurteilen marktgängiger IT-Systeme und Lösungen": [
-        {"frage": "Welches Kriterium ist bei der Systembewertung wichtig?", "auswahl": ["Kosteneffizienz", "Farbe des Gehäuses", "Markenname", "Anzahl der Features"], "antwort": "Kosteneffizienz"},
-        {"frage": "Was bedeutet Skalierbarkeit eines Systems?", "auswahl": ["Anpassbarkeit an wachsende Anforderungen", "Schön anzusehen", "Teuer", "Kompliziert"], "antwort": "Anpassbarkeit an wachsende Anforderungen"},
-        {"frage": "Welcher Aspekt ist bei IT-Lösungen entscheidend?", "auswahl": ["Kompatibilität", "Design", "Marke", "Popularität"], "antwort": "Kompatibilität"},
-        {"frage": "Was ist bei der Bewertung von Softwarelösungen wichtig?", "auswahl": ["Benutzerfreundlichkeit", "Anzahl der Fenster", "Farbe der Icons", "Länge des Namens"], "antwort": "Benutzerfreundlichkeit"},
-        {"frage": "Welche Faktoren beeinflussen die Systemauswahl?", "auswahl": ["Performance und Zuverlässigkeit", "Preis allein", "Werbung", "Zufall"], "antwort": "Performance und Zuverlässigkeit"}
-    ],
-    "Entwickeln, Erstellen und Betreuen von IT-Lösungen": [
-        {"frage": "Welcher Prozess gehört zur Softwareentwicklung?", "auswahl": ["Debugging", "Einkaufen", "Kochen", "Sport"], "antwort": "Debugging"},
-        {"frage": "Was ist ein wichtiger Aspekt beim Software-Betreuung?", "auswahl": ["Updates und Wartung", "Urlaub", "Partys", "Shopping"], "antwort": "Updates und Wartung"},
-        {"frage": "Welche Methode wird im Software-Engineering verwendet?", "auswahl": ["Agile Entwicklung", "Zufallsgenerator", "Würfeln", "Raten"], "antwort": "Agile Entwicklung"},
-        {"frage": "Was gehört zur Dokumentation von IT-Lösungen?", "auswahl": ["Quellcode-Kommentare", "Einkaufszettel", "Rezepte", "Notizen"], "antwort": "Quellcode-Kommentare"},
-        {"frage": "Welche Rolle spielt Testing in der Entwicklung?", "auswahl": ["Qualitätssicherung", "Zeitverschwendung", "Unwichtig", "Kostenfaktor"], "antwort": "Qualitätssicherung"}
-    ],
-    "Qualitätssichernde Maßnahmen": [
-        {"frage": "Was ist ein Ziel der Qualitätssicherung?", "auswahl": ["Fehlervermeidung", "Fehlerproduktion", "Kostensteigerung", "Zeitverlust"], "antwort": "Fehlervermeidung"},
-        {"frage": "Welche Methode gehört zur Qualitätssicherung?", "auswahl": ["Testverfahren", "Raten", "Zufall", "Ignorieren"], "antwort": "Testverfahren"},
-        {"frage": "Was ist bei Software-Tests wichtig?", "auswahl": ["Vollständige Abdeckung", "Oberflächliche Prüfung", "Einzelne Funktion", "Zufällige Auswahl"], "antwort": "Vollständige Abdeckung"},
-        {"frage": "Welcher Standard ist für Qualität relevant?", "auswahl": ["ISO 9001", "ISO 14001", "ISO 45001", "ISO 27001"], "antwort": "ISO 9001"},
-        {"frage": "Was gehört zur kontinuierlichen Verbesserung?", "auswahl": ["Feedback-Schleifen", "Stillstand", "Rückgang", "Ignoranz"], "antwort": "Feedback-Schleifen"}
-    ],
-    "IT-Sicherheit und Datenschutz, Ergonomie": [
-        {"frage": "Welche Maßnahme schützt vor Datenverlust?", "auswahl": ["Regelmäßige Backups", "Keine Backups", "Löschen von Daten", "Ignorieren des Problems"], "antwort": "Regelmäßige Backups"},
-        {"frage": "Was ist ein wichtiger Aspekt des Datenschutzes?", "auswahl": ["Verschlüsselung", "Veröffentlichung", "Teilen in sozialen Medien", "Ignorieren"], "antwort": "Verschlüsselung"},
-        {"frage": "Welche Ergonomie-Regel gilt am Arbeitsplatz?", "auswahl": ["Richtige Bildschirmhöhe", "Beliebige Position", "Dunkler Raum", "Lauter Musik"], "antwort": "Richtige Bildschirmhöhe"},
-        {"frage": "Was schützt vor Phishing-Angriffen?", "auswahl": ["Mitarbeiterschulung", "Klick auf alles", "Ignorieren von Warnungen", "Alle E-Mails öffnen"], "antwort": "Mitarbeiterschulung"},
-        {"frage": "Welcher Standard behandelt Informationssicherheit?", "auswahl": ["ISO 27001", "ISO 9001", "ISO 14001", "ISO 45001"], "antwort": "ISO 27001"}
-    ],
-    "Auftragsabschluss und Leistungserbringung": [
-        {"frage": "Was gehört zum ordnungsgemäßen Auftragsabschluss?", "auswahl": ["Dokumentation und Abnahme", "Ignorieren des Kunden", "Weglaufen", "Nichts tun"], "antwort": "Dokumentation und Abnahme"},
-        {"frage": "Welche Dokumente sind beim Leistungsvertrag wichtig?", "auswahl": ["Service Level Agreement", "Einkaufsliste", "Speiseplan", "Wetterbericht"], "antwort": "Service Level Agreement"},
-        {"frage": "Was ist bei der Leistungserbringung entscheidend?", "auswahl": ["Termintreue", "Verspätung", "Chaotisches Arbeiten", "Ignorieren der Anforderungen"], "antwort": "Termintreue"},
-        {"frage": "Welche Vertragsart ist im IT-Bereich üblich?", "auswahl": ["Werkvertrag", "Leihvertrag", "Mietvertrag", "Kaufvertrag"], "antwort": "Werkvertrag"},
-        {"frage": "Was gehört zur Kundenzufriedenheit?", "auswahl": ["Einhaltung von Qualitätsstandards", "Überteuerte Rechnungen", "Schlechte Kommunikation", "Verspätete Lieferung"], "antwort": "Einhaltung von Qualitätsstandards"}
-    ]
-}
+# Load quiz categories from external JSON file
+def load_quiz_categories(filename="questions.json"):
+    try:
+        with open(filename, 'r', encoding='utf-8') as f:
+            return json.load(f)
+    except FileNotFoundError:
+        # Fallback to original data if file not found
+        print(f"Warnung: {filename} nicht gefunden. Verwende eingebaute Fragen.")
+        return get_default_quiz_categories()
+    except json.JSONDecodeError:
+        print(f"Fehler beim Lesen von {filename}. Verwende eingebaute Fragen.")
+        return get_default_quiz_categories()
+
+def get_default_quiz_categories():
+    # Original Fragenkategorien als Fallback
+    return {
+        "Planen, Vorbereiten und Durchführen von Arbeitsaufgaben": [
+            {"frage": "Welche Methode wird häufig für die Projektplanung verwendet?", "auswahl": ["Wasserfallmodell", "Scrum", "Beides", "Keine"], "antwort": "Beides"},
+            {"frage": "Was ist ein wichtiger Bestandteil der Arbeitsvorbereitung?", "auswahl": ["Ressourcenplanung", "Kaffeepause", "Social Media", "Chatten"], "antwort": "Ressourcenplanung"},
+            {"frage": "Welches Dokument beschreibt die Vorgehensweise bei einem Projekt?", "auswahl": ["Projektplan", "Einkaufsliste", "Speiseplan", "Wetterbericht"], "antwort": "Projektplan"},
+            {"frage": "Was gehört zur Auftragsdurchführung?", "auswahl": ["Zeiterfassung", "Urlaubsplanung", "Kaffeekochen", "Shoppen"], "antwort": "Zeiterfassung"},
+            {"frage": "Welche Rolle ist typisch für einen Projektleiter?", "auswahl": ["Koordination", "Kassieren", "Putzen", "Kochen"], "antwort": "Koordination"}
+        ],
+        "Informieren und Beraten von Kunden und Kundinnen": [
+            {"frage": "Was ist bei einer Kundenberatung wichtig?", "auswahl": ["Aktives Zuhören", "Reden ohne Pause", "Technischer Jargon", "Ignorieren der Wünsche"], "antwort": "Aktives Zuhören"},
+            {"frage": "Wie sollte man technische Informationen an Kunden weitergeben?", "auswahl": ["Verständlich und einfach", "Hochkomplex", "Fachchinesisch", "Mit vielen Abkürzungen"], "antwort": "Verständlich und einfach"},
+            {"frage": "Welche Fähigkeit ist für Kundenberatung entscheidend?", "auswahl": ["Empathie", "Arroganz", "Unfreundlichkeit", "Uninteressiertheit"], "antwort": "Empathie"},
+            {"frage": "Was gehört zur Kundeninformation?", "auswahl": ["Produktdatenblätter", "Geheime Unterlagen", "Private Daten", "Konkurrenzgeheimnisse"], "antwort": "Produktdatenblätter"},
+            {"frage": "Wie geht man mit Kundenbeschwerden um?", "auswahl": ["Konstruktiv und lösungsorientiert", "Ablehnend", "Ignorierend", "Aggressiv"], "antwort": "Konstruktiv und lösungsorientiert"}
+        ],
+        "Beurteilen marktgängiger IT-Systeme und Lösungen": [
+            {"frage": "Welches Kriterium ist bei der Systembewertung wichtig?", "auswahl": ["Kosteneffizienz", "Farbe des Gehäuses", "Markenname", "Anzahl der Features"], "antwort": "Kosteneffizienz"},
+            {"frage": "Was bedeutet Skalierbarkeit eines Systems?", "auswahl": ["Anpassbarkeit an wachsende Anforderungen", "Schön anzusehen", "Teuer", "Kompliziert"], "antwort": "Anpassbarkeit an wachsende Anforderungen"},
+            {"frage": "Welcher Aspekt ist bei IT-Lösungen entscheidend?", "auswahl": ["Kompatibilität", "Design", "Marke", "Popularität"], "antwort": "Kompatibilität"},
+            {"frage": "Was ist bei der Bewertung von Softwarelösungen wichtig?", "auswahl": ["Benutzerfreundlichkeit", "Anzahl der Fenster", "Farbe der Icons", "Länge des Namens"], "antwort": "Benutzerfreundlichkeit"},
+            {"frage": "Welche Faktoren beeinflussen die Systemauswahl?", "auswahl": ["Performance und Zuverlässigkeit", "Preis allein", "Werbung", "Zufall"], "antwort": "Performance und Zuverlässigkeit"}
+        ],
+        "Entwickeln, Erstellen und Betreuen von IT-Lösungen": [
+            {"frage": "Welcher Prozess gehört zur Softwareentwicklung?", "auswahl": ["Debugging", "Einkaufen", "Kochen", "Sport"], "antwort": "Debugging"},
+            {"frage": "Was ist ein wichtiger Aspekt beim Software-Betreuung?", "auswahl": ["Updates und Wartung", "Urlaub", "Partys", "Shopping"], "antwort": "Updates und Wartung"},
+            {"frage": "Welche Methode wird im Software-Engineering verwendet?", "auswahl": ["Agile Entwicklung", "Zufallsgenerator", "Würfeln", "Raten"], "antwort": "Agile Entwicklung"},
+            {"frage": "Was gehört zur Dokumentation von IT-Lösungen?", "auswahl": ["Quellcode-Kommentare", "Einkaufszettel", "Rezepte", "Notizen"], "antwort": "Quellcode-Kommentare"},
+            {"frage": "Welche Rolle spielt Testing in der Entwicklung?", "auswahl": ["Qualitätssicherung", "Zeitverschwendung", "Unwichtig", "Kostenfaktor"], "antwort": "Qualitätssicherung"}
+        ],
+        "Qualitätssichernde Maßnahmen": [
+            {"frage": "Was ist ein Ziel der Qualitätssicherung?", "auswahl": ["Fehlervermeidung", "Fehlerproduktion", "Kostensteigerung", "Zeitverlust"], "antwort": "Fehlervermeidung"},
+            {"frage": "Welche Methode gehört zur Qualitätssicherung?", "auswahl": ["Testverfahren", "Raten", "Zufall", "Ignorieren"], "antwort": "Testverfahren"},
+            {"frage": "Was ist bei Software-Tests wichtig?", "auswahl": ["Vollständige Abdeckung", "Oberflächliche Prüfung", "Einzelne Funktion", "Zufällige Auswahl"], "antwort": "Vollständige Abdeckung"},
+            {"frage": "Welcher Standard ist für Qualität relevant?", "auswahl": ["ISO 9001", "ISO 14001", "ISO 45001", "ISO 27001"], "antwort": "ISO 9001"},
+            {"frage": "Was gehört zur kontinuierlichen Verbesserung?", "auswahl": ["Feedback-Schleifen", "Stillstand", "Rückgang", "Ignoranz"], "antwort": "Feedback-Schleifen"}
+        ],
+        "IT-Sicherheit und Datenschutz, Ergonomie": [
+            {"frage": "Welche Maßnahme schützt vor Datenverlust?", "auswahl": ["Regelmäßige Backups", "Keine Backups", "Löschen von Daten", "Ignorieren des Problems"], "antwort": "Regelmäßige Backups"},
+            {"frage": "Was ist ein wichtiger Aspekt des Datenschutzes?", "auswahl": ["Verschlüsselung", "Veröffentlichung", "Teilen in sozialen Medien", "Ignorieren"], "antwort": "Verschlüsselung"},
+            {"frage": "Welche Ergonomie-Regel gilt am Arbeitsplatz?", "auswahl": ["Richtige Bildschirmhöhe", "Beliebige Position", "Dunkler Raum", "Lauter Musik"], "antwort": "Richtige Bildschirmhöhe"},
+            {"frage": "Was schützt vor Phishing-Angriffen?", "auswahl": ["Mitarbeiterschulung", "Klick auf alles", "Ignorieren von Warnungen", "Alle E-Mails öffnen"], "antwort": "Mitarbeiterschulung"},
+            {"frage": "Welcher Standard behandelt Informationssicherheit?", "auswahl": ["ISO 27001", "ISO 9001", "ISO 14001", "ISO 45001"], "antwort": "ISO 27001"}
+        ],
+        "Auftragsabschluss und Leistungserbringung": [
+            {"frage": "Was gehört zum ordnungsgemäßen Auftragsabschluss?", "auswahl": ["Dokumentation und Abnahme", "Ignorieren des Kunden", "Weglaufen", "Nichts tun"], "antwort": "Dokumentation und Abnahme"},
+            {"frage": "Welche Dokumente sind beim Leistungsvertrag wichtig?", "auswahl": ["Service Level Agreement", "Einkaufsliste", "Speiseplan", "Wetterbericht"], "antwort": "Service Level Agreement"},
+            {"frage": "Was ist bei der Leistungserbringung entscheidend?", "auswahl": ["Termintreue", "Verspätung", "Chaotisches Arbeiten", "Ignorieren der Anforderungen"], "antwort": "Termintreue"},
+            {"frage": "Welche Vertragsart ist im IT-Bereich üblich?", "auswahl": ["Werkvertrag", "Leihvertrag", "Mietvertrag", "Kaufvertrag"], "antwort": "Werkvertrag"},
+            {"frage": "Was gehört zur Kundenzufriedenheit?", "auswahl": ["Einhaltung von Qualitätsstandards", "Überteuerte Rechnungen", "Schlechte Kommunikation", "Verspätete Lieferung"], "antwort": "Einhaltung von Qualitätsstandards"}
+        ]
+    }
+
+# Load questions from external file
+quiz_categories = load_quiz_categories()
 
 class HighscoreManager:
     def __init__(self, filename="highscores.json"):
@@ -94,7 +111,8 @@ class HighscoreManager:
             "date": datetime.now().strftime("%d.%m.%Y %H:%M")
         }
         self.highscores.append(entry)
-        self.highscores.sort(key=lambda x: x["percentage"], reverse=True)
+        # Sortiere nach Prozentzahl (absteigend) und dann nach Zeit (aufsteigend)
+        self.highscores.sort(key=lambda x: (-x["percentage"], x["time_taken"]))
         self.highscores = self.highscores[:10]
         self.save_highscores()
 
@@ -113,8 +131,8 @@ class QuizApp(ctk.CTk):
         self.timer_running = False
         self.timer_id = None
         self.title("IT-Berufe Lernkarten-Quiz")
-        self.geometry("800x700")
-        self.minsize(800, 700)
+        self.geometry("1000x900")
+        self.minsize(900, 900)
         
         # Load logo
         try:
