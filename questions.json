@@ -1,181 +1,486 @@
 {
-    "Planen, Vorbereiten und Durchführen von Arbeitsaufgaben": [
-      { "frage": "Welche Methode wird häufig für die Projektplanung verwendet?", "auswahl": ["Wasserfallmodell","Scrum","Beides","Keine"], "antwort": "Beides" },
-      { "frage": "Was ist ein wichtiger Bestandteil der Arbeitsvorbereitung?",        "auswahl": ["Ressourcenplanung","Kaffeepause","Social Media","Chatten"],         "antwort": "Ressourcenplanung" },
-      { "frage": "Welches Dokument beschreibt die Vorgehensweise bei einem Projekt?","auswahl": ["Projektplan","Einkaufsliste","Speiseplan","Wetterbericht"],    "antwort": "Projektplan" },
-      { "frage": "Was gehört zur Auftragsdurchführung?",                         "auswahl": ["Zeiterfassung","Urlaubsplanung","Kaffeekochen","Shoppen"],    "antwort": "Zeiterfassung" },
-      { "frage": "Welche Rolle ist typisch für einen Projektleiter?",             "auswahl": ["Koordination","Kassieren","Putzen","Kochen"],              "antwort": "Koordination" },
-      { "frage": "Was zeigt ein Gantt-Diagramm?",                                "auswahl": ["Zeitplanung","Budgetübersicht","Risikoliste","Kommunikationsplan"], "antwort": "Zeitplanung" },
-      { "frage": "Wofür dient ein Risikomanagementplan?",                        "auswahl": ["Ressourcenallokation","Team-Building","Risiken identifizieren","Feierplanung"], "antwort": "Risiken identifizieren" },
-      { "frage": "Was ist ein Projektmeilenstein?",                             "auswahl": ["Projektende","Zwischenereignis","Feiertermin","Budgetposten"],    "antwort": "Zwischenereignis" },
-      { "frage": "Was beschreibt ein Lastenheft?",                              "auswahl": ["Umsetzungskonzept","Design-Vorlage","Anforderungen des Auftraggebers","Marketingstrategie"], "antwort": "Anforderungen des Auftraggebers" },
-      { "frage": "Was beinhaltet ein Pflichtenheft?",                            "auswahl": ["Technische Umsetzung","Personalplanung","Urlaubsanträge","Workshop-Agenda"],    "antwort": "Technische Umsetzung" },
-      { "frage": "Was versteht man unter Scope Creep?",                         "auswahl": ["Projektverzögerung","Umfangserweiterung","Kostenreduktion","Teambuilding"],      "antwort": "Umfangserweiterung" },
-      { "frage": "Welches Prinzip verfolgt Lean Management?",                    "auswahl": ["Mehr Meetings","Verschwendung vermeiden","Minimale Dokumentation","Maximales Lager"], "antwort": "Verschwendung vermeiden" },
-      { "frage": "Was ist ein Kanban-Board?",                                   "auswahl": ["Budgetplan","Visualisierung des Arbeitsflusses","Tageszeitung","Personalakte"],    "antwort": "Visualisierung des Arbeitsflusses" },
-      { "frage": "Was bedeutet Kick-off-Meeting?",                              "auswahl": ["Projektstartbesprechung","Feierabendmeeting","Budgetabstimmung","Urlaubsplanung"], "antwort": "Projektstartbesprechung" },
-      { "frage": "Was ist der Projektabschlussbericht?",                       "auswahl": ["Anforderungsdokument","Zusammenfassung der Ergebnisse","Meeting-Protokoll","Marketingplan"], "antwort": "Zusammenfassung der Ergebnisse" }
-    ],
-  "Informieren und Beraten von Kunden und Kundinnen": [
+  "Auftragsabschluss und Leistungserbringung": [
     {
-      "frage": "Was ist bei einer Kundenberatung wichtig?",
-      "auswahl": ["Aktives Zuhören", "Reden ohne Pause", "Technischer Jargon", "Ignorieren der Wünsche"],
-      "antwort": "Aktives Zuhören"
+      "antwort": "Dokumentation und Abnahme",
+      "auswahl": [
+        "Dokumentation und Abnahme",
+        "Ignorieren des Kunden",
+        "Weglaufen",
+        "Nichts tun"
+      ],
+      "frage": "Was gehört zum ordnungsgemäßen Auftragsabschluss?"
     },
     {
-      "frage": "Wie sollte man technische Informationen an Kunden weitergeben?",
-      "auswahl": ["Verständlich und einfach", "Hochkomplex", "Fachchinesisch", "Mit vielen Abkürzungen"],
-      "antwort": "Verständlich und einfach"
+      "antwort": "Service Level Agreement",
+      "auswahl": [
+        "Service Level Agreement",
+        "Einkaufsliste",
+        "Speiseplan",
+        "Wetterbericht"
+      ],
+      "frage": "Welche Dokumente sind beim Leistungsvertrag wichtig?"
     },
     {
-      "frage": "Welche Fähigkeit ist für Kundenberatung entscheidend?",
-      "auswahl": ["Empathie", "Arroganz", "Unfreundlichkeit", "Uninteressiertheit"],
-      "antwort": "Empathie"
+      "antwort": "Termintreue",
+      "auswahl": [
+        "Termintreue",
+        "Verspätung",
+        "Chaotisches Arbeiten",
+        "Ignorieren der Anforderungen"
+      ],
+      "frage": "Was ist bei der Leistungserbringung entscheidend?"
     },
     {
-      "frage": "Was gehört zur Kundeninformation?",
-      "auswahl": ["Produktdatenblätter", "Geheime Unterlagen", "Private Daten", "Konkurrenzgeheimnisse"],
-      "antwort": "Produktdatenblätter"
+      "antwort": "Werkvertrag",
+      "auswahl": [
+        "Werkvertrag",
+        "Leihvertrag",
+        "Mietvertrag",
+        "Kaufvertrag"
+      ],
+      "frage": "Welche Vertragsart ist im IT-Bereich üblich?"
     },
     {
-      "frage": "Wie geht man mit Kundenbeschwerden um?",
-      "auswahl": ["Konstruktiv und lösungsorientiert", "Ablehnend", "Ignorierend", "Aggressiv"],
-      "antwort": "Konstruktiv und lösungsorientiert"
+      "antwort": "Einhaltung von Qualitätsstandards",
+      "auswahl": [
+        "Einhaltung von Qualitätsstandards",
+        "Überteuerte Rechnungen",
+        "Schlechte Kommunikation",
+        "Verspätete Lieferung"
+      ],
+      "frage": "Was gehört zur Kundenzufriedenheit?"
     }
   ],
   "Beurteilen marktgängiger IT-Systeme und Lösungen": [
     {
-      "frage": "Welches Kriterium ist bei der Systembewertung wichtig?",
-      "auswahl": ["Kosteneffizienz", "Farbe des Gehäuses", "Markenname", "Anzahl der Features"],
-      "antwort": "Kosteneffizienz"
+      "antwort": "Kosteneffizienz",
+      "auswahl": [
+        "Kosteneffizienz",
+        "Farbe des Gehäuses",
+        "Markenname",
+        "Anzahl der Features"
+      ],
+      "frage": "Welches Kriterium ist bei der Systembewertung wichtig?"
     },
     {
-      "frage": "Was bedeutet Skalierbarkeit eines Systems?",
-      "auswahl": ["Anpassbarkeit an wachsende Anforderungen", "Schön anzusehen", "Teuer", "Kompliziert"],
-      "antwort": "Anpassbarkeit an wachsende Anforderungen"
+      "antwort": "Anpassbarkeit an wachsende Anforderungen",
+      "auswahl": [
+        "Anpassbarkeit an wachsende Anforderungen",
+        "Schön anzusehen",
+        "Teuer",
+        "Kompliziert"
+      ],
+      "frage": "Was bedeutet Skalierbarkeit eines Systems?"
     },
     {
-      "frage": "Welcher Aspekt ist bei IT-Lösungen entscheidend?",
-      "auswahl": ["Kompatibilität", "Design", "Marke", "Popularität"],
-      "antwort": "Kompatibilität"
+      "antwort": "Kompatibilität",
+      "auswahl": [
+        "Kompatibilität",
+        "Design",
+        "Marke",
+        "Popularität"
+      ],
+      "frage": "Welcher Aspekt ist bei IT-Lösungen entscheidend?"
     },
     {
-      "frage": "Was ist bei der Bewertung von Softwarelösungen wichtig?",
-      "auswahl": ["Benutzerfreundlichkeit", "Anzahl der Fenster", "Farbe der Icons", "Länge des Namens"],
-      "antwort": "Benutzerfreundlichkeit"
+      "antwort": "Benutzerfreundlichkeit",
+      "auswahl": [
+        "Benutzerfreundlichkeit",
+        "Anzahl der Fenster",
+        "Farbe der Icons",
+        "Länge des Namens"
+      ],
+      "frage": "Was ist bei der Bewertung von Softwarelösungen wichtig?"
     },
     {
-      "frage": "Welche Faktoren beeinflussen die Systemauswahl?",
-      "auswahl": ["Performance und Zuverlässigkeit", "Preis allein", "Werbung", "Zufall"],
-      "antwort": "Performance und Zuverlässigkeit"
+      "antwort": "Performance und Zuverlässigkeit",
+      "auswahl": [
+        "Performance und Zuverlässigkeit",
+        "Preis allein",
+        "Werbung",
+        "Zufall"
+      ],
+      "frage": "Welche Faktoren beeinflussen die Systemauswahl?"
     }
   ],
   "Entwickeln, Erstellen und Betreuen von IT-Lösungen": [
     {
-      "frage": "Welcher Prozess gehört zur Softwareentwicklung?",
-      "auswahl": ["Debugging", "Einkaufen", "Kochen", "Sport"],
-      "antwort": "Debugging"
+      "antwort": "Debugging",
+      "auswahl": [
+        "Debugging",
+        "Einkaufen",
+        "Kochen",
+        "Sport"
+      ],
+      "frage": "Welcher Prozess gehört zur Softwareentwicklung?"
     },
     {
-      "frage": "Was ist ein wichtiger Aspekt beim Software-Betreuung?",
-      "auswahl": ["Updates und Wartung", "Urlaub", "Partys", "Shopping"],
-      "antwort": "Updates und Wartung"
+      "antwort": "Updates und Wartung",
+      "auswahl": [
+        "Updates und Wartung",
+        "Urlaub",
+        "Partys",
+        "Shopping"
+      ],
+      "frage": "Was ist ein wichtiger Aspekt beim Software-Betreuung?"
     },
     {
-      "frage": "Welche Methode wird im Software-Engineering verwendet?",
-      "auswahl": ["Agile Entwicklung", "Zufallsgenerator", "Würfeln", "Raten"],
-      "antwort": "Agile Entwicklung"
+      "antwort": "Agile Entwicklung",
+      "auswahl": [
+        "Agile Entwicklung",
+        "Zufallsgenerator",
+        "Würfeln",
+        "Raten"
+      ],
+      "frage": "Welche Methode wird im Software-Engineering verwendet?"
     },
     {
-      "frage": "Was gehört zur Dokumentation von IT-Lösungen?",
-      "auswahl": ["Quellcode-Kommentare", "Einkaufszettel", "Rezepte", "Notizen"],
-      "antwort": "Quellcode-Kommentare"
+      "antwort": "Quellcode-Kommentare",
+      "auswahl": [
+        "Quellcode-Kommentare",
+        "Einkaufszettel",
+        "Rezepte",
+        "Notizen"
+      ],
+      "frage": "Was gehört zur Dokumentation von IT-Lösungen?"
     },
     {
-      "frage": "Welche Rolle spielt Testing in der Entwicklung?",
-      "auswahl": ["Qualitätssicherung", "Zeitverschwendung", "Unwichtig", "Kostenfaktor"],
-      "antwort": "Qualitätssicherung"
-    }
-  ],
-  "Qualitätssichernde Maßnahmen": [
-    {
-      "frage": "Was ist ein Ziel der Qualitätssicherung?",
-      "auswahl": ["Fehlervermeidung", "Fehlerproduktion", "Kostensteigerung", "Zeitverlust"],
-      "antwort": "Fehlervermeidung"
+      "antwort": "Qualitätssicherung",
+      "auswahl": [
+        "Qualitätssicherung",
+        "Zeitverschwendung",
+        "Unwichtig",
+        "Kostenfaktor"
+      ],
+      "frage": "Welche Rolle spielt Testing in der Entwicklung?"
     },
     {
-      "frage": "Welche Methode gehört zur Qualitätssicherung?",
-      "auswahl": ["Testverfahren", "Raten", "Zufall", "Ignorieren"],
-      "antwort": "Testverfahren"
-    },
-    {
-      "frage": "Was ist bei Software-Tests wichtig?",
-      "auswahl": ["Vollständige Abdeckung", "Oberflächliche Prüfung", "Einzelne Funktion", "Zufällige Auswahl"],
-      "antwort": "Vollständige Abdeckung"
-    },
-    {
-      "frage": "Welcher Standard ist für Qualität relevant?",
-      "auswahl": ["ISO 9001", "ISO 14001", "ISO 45001", "ISO 27001"],
-      "antwort": "ISO 9001"
-    },
-    {
-      "frage": "Was gehört zur kontinuierlichen Verbesserung?",
-      "auswahl": ["Feedback-Schleifen", "Stillstand", "Rückgang", "Ignoranz"],
-      "antwort": "Feedback-Schleifen"
+      "antwort": "dddd",
+      "auswahl": [
+        "dddd",
+        "ddd",
+        "ddd",
+        "ddd"
+      ],
+      "frage": "dddd"
     }
   ],
   "IT-Sicherheit und Datenschutz, Ergonomie": [
     {
-      "frage": "Welche Maßnahme schützt vor Datenverlust?",
-      "auswahl": ["Regelmäßige Backups", "Keine Backups", "Löschen von Daten", "Ignorieren des Problems"],
-      "antwort": "Regelmäßige Backups"
+      "antwort": "Regelmäßige Backups",
+      "auswahl": [
+        "Regelmäßige Backups",
+        "Keine Backups",
+        "Löschen von Daten",
+        "Ignorieren des Problems"
+      ],
+      "frage": "Welche Maßnahme schützt vor Datenverlust?"
     },
     {
-      "frage": "Was ist ein wichtiger Aspekt des Datenschutzes?",
-      "auswahl": ["Verschlüsselung", "Veröffentlichung", "Teilen in sozialen Medien", "Ignorieren"],
-      "antwort": "Verschlüsselung"
+      "antwort": "Verschlüsselung",
+      "auswahl": [
+        "Verschlüsselung",
+        "Veröffentlichung",
+        "Teilen in sozialen Medien",
+        "Ignorieren"
+      ],
+      "frage": "Was ist ein wichtiger Aspekt des Datenschutzes?"
     },
     {
-      "frage": "Welche Ergonomie-Regel gilt am Arbeitsplatz?",
-      "auswahl": ["Richtige Bildschirmhöhe", "Beliebige Position", "Dunkler Raum", "Lauter Musik"],
-      "antwort": "Richtige Bildschirmhöhe"
+      "antwort": "Richtige Bildschirmhöhe",
+      "auswahl": [
+        "Richtige Bildschirmhöhe",
+        "Beliebige Position",
+        "Dunkler Raum",
+        "Lauter Musik"
+      ],
+      "frage": "Welche Ergonomie-Regel gilt am Arbeitsplatz?"
     },
     {
-      "frage": "Was schützt vor Phishing-Angriffen?",
-      "auswahl": ["Mitarbeiterschulung", "Klick auf alles", "Ignorieren von Warnungen", "Alle E-Mails öffnen"],
-      "antwort": "Mitarbeiterschulung"
+      "antwort": "Mitarbeiterschulung",
+      "auswahl": [
+        "Mitarbeiterschulung",
+        "Klick auf alles",
+        "Ignorieren von Warnungen",
+        "Alle E-Mails öffnen"
+      ],
+      "frage": "Was schützt vor Phishing-Angriffen?"
     },
     {
-      "frage": "Welcher Standard behandelt Informationssicherheit?",
-      "auswahl": ["ISO 27001", "ISO 9001", "ISO 14001", "ISO 45001"],
-      "antwort": "ISO 27001"
+      "antwort": "ISO 27001",
+      "auswahl": [
+        "ISO 27001",
+        "ISO 9001",
+        "ISO 14001",
+        "ISO 45001"
+      ],
+      "frage": "Welcher Standard behandelt Informationssicherheit?"
     }
   ],
-  "Auftragsabschluss und Leistungserbringung": [
+  "Informieren und Beraten von Kunden und Kundinnen": [
     {
-      "frage": "Was gehört zum ordnungsgemäßen Auftragsabschluss?",
-      "auswahl": ["Dokumentation und Abnahme", "Ignorieren des Kunden", "Weglaufen", "Nichts tun"],
-      "antwort": "Dokumentation und Abnahme"
+      "antwort": "Aktives Zuhören",
+      "auswahl": [
+        "Aktives Zuhören",
+        "Reden ohne Pause",
+        "Technischer Jargon",
+        "Ignorieren der Wünsche"
+      ],
+      "frage": "Was ist bei einer Kundenberatung wichtig?"
     },
     {
-      "frage": "Welche Dokumente sind beim Leistungsvertrag wichtig?",
-      "auswahl": ["Service Level Agreement", "Einkaufsliste", "Speiseplan", "Wetterbericht"],
-      "antwort": "Service Level Agreement"
+      "antwort": "Verständlich und einfach",
+      "auswahl": [
+        "Verständlich und einfach",
+        "Hochkomplex",
+        "Fachchinesisch",
+        "Mit vielen Abkürzungen"
+      ],
+      "frage": "Wie sollte man technische Informationen an Kunden weitergeben?"
     },
     {
-      "frage": "Was ist bei der Leistungserbringung entscheidend?",
-      "auswahl": ["Termintreue", "Verspätung", "Chaotisches Arbeiten", "Ignorieren der Anforderungen"],
-      "antwort": "Termintreue"
+      "antwort": "Empathie",
+      "auswahl": [
+        "Empathie",
+        "Arroganz",
+        "Unfreundlichkeit",
+        "Uninteressiertheit"
+      ],
+      "frage": "Welche Fähigkeit ist für Kundenberatung entscheidend?"
     },
     {
-      "frage": "Welche Vertragsart ist im IT-Bereich üblich?",
-      "auswahl": ["Werkvertrag", "Leihvertrag", "Mietvertrag", "Kaufvertrag"],
-      "antwort": "Werkvertrag"
+      "antwort": "Produktdatenblätter",
+      "auswahl": [
+        "Produktdatenblätter",
+        "Geheime Unterlagen",
+        "Private Daten",
+        "Konkurrenzgeheimnisse"
+      ],
+      "frage": "Was gehört zur Kundeninformation?"
     },
     {
-      "frage": "Was gehört zur Kundenzufriedenheit?",
-      "auswahl": ["Einhaltung von Qualitätsstandards", "Überteuerte Rechnungen", "Schlechte Kommunikation", "Verspätete Lieferung"],
-      "antwort": "Einhaltung von Qualitätsstandards"
+      "antwort": "Konstruktiv und lösungsorientiert",
+      "auswahl": [
+        "Konstruktiv und lösungsorientiert",
+        "Ablehnend",
+        "Ignorierend",
+        "Aggressiv"
+      ],
+      "frage": "Wie geht man mit Kundenbeschwerden um?"
+    }
+  ],
+  "Planen, Vorbereiten und Durchführen von Arbeitsaufgaben": [
+    {
+      "antwort": "Beides",
+      "auswahl": [
+        "Wasserfallmodell",
+        "Scrum",
+        "Beides",
+        "Keine"
+      ],
+      "frage": "Welche Methode wird häufig für die Projektplanung verwendet?"
+    },
+    {
+      "antwort": "Ressourcenplanung",
+      "auswahl": [
+        "Ressourcenplanung",
+        "Kaffeepause",
+        "Social Media",
+        "Chatten"
+      ],
+      "frage": "Was ist ein wichtiger Bestandteil der Arbeitsvorbereitung?"
+    },
+    {
+      "antwort": "Projektplan",
+      "auswahl": [
+        "Projektplan",
+        "Einkaufsliste",
+        "Speiseplan",
+        "Wetterbericht"
+      ],
+      "frage": "Welches Dokument beschreibt die Vorgehensweise bei einem Projekt?"
+    },
+    {
+      "antwort": "Zeiterfassung",
+      "auswahl": [
+        "Zeiterfassung",
+        "Urlaubsplanung",
+        "Kaffeekochen",
+        "Shoppen"
+      ],
+      "frage": "Was gehört zur Auftragsdurchführung?"
+    },
+    {
+      "antwort": "Koordination",
+      "auswahl": [
+        "Koordination",
+        "Kassieren",
+        "Putzen",
+        "Kochen"
+      ],
+      "frage": "Welche Rolle ist typisch für einen Projektleiter?"
+    },
+    {
+      "antwort": "Zeitplanung",
+      "auswahl": [
+        "Zeitplanung",
+        "Budgetübersicht",
+        "Risikoliste",
+        "Kommunikationsplan"
+      ],
+      "frage": "Was zeigt ein Gantt-Diagramm?"
+    },
+    {
+      "antwort": "Risiken identifizieren",
+      "auswahl": [
+        "Ressourcenallokation",
+        "Team-Building",
+        "Risiken identifizieren",
+        "Feierplanung"
+      ],
+      "frage": "Wofür dient ein Risikomanagementplan?"
+    },
+    {
+      "antwort": "Zwischenereignis",
+      "auswahl": [
+        "Projektende",
+        "Zwischenereignis",
+        "Feiertermin",
+        "Budgetposten"
+      ],
+      "frage": "Was ist ein Projektmeilenstein?"
+    },
+    {
+      "antwort": "Anforderungen des Auftraggebers",
+      "auswahl": [
+        "Umsetzungskonzept",
+        "Design-Vorlage",
+        "Anforderungen des Auftraggebers",
+        "Marketingstrategie"
+      ],
+      "frage": "Was beschreibt ein Lastenheft?"
+    },
+    {
+      "antwort": "Technische Umsetzung",
+      "auswahl": [
+        "Technische Umsetzung",
+        "Personalplanung",
+        "Urlaubsanträge",
+        "Workshop-Agenda"
+      ],
+      "frage": "Was beinhaltet ein Pflichtenheft?"
+    },
+    {
+      "antwort": "Umfangserweiterung",
+      "auswahl": [
+        "Projektverzögerung",
+        "Umfangserweiterung",
+        "Kostenreduktion",
+        "Teambuilding"
+      ],
+      "frage": "Was versteht man unter Scope Creep?"
+    },
+    {
+      "antwort": "Verschwendung vermeiden",
+      "auswahl": [
+        "Mehr Meetings",
+        "Verschwendung vermeiden",
+        "Minimale Dokumentation",
+        "Maximales Lager"
+      ],
+      "frage": "Welches Prinzip verfolgt Lean Management?"
+    },
+    {
+      "antwort": "Visualisierung des Arbeitsflusses",
+      "auswahl": [
+        "Budgetplan",
+        "Visualisierung des Arbeitsflusses",
+        "Tageszeitung",
+        "Personalakte"
+      ],
+      "frage": "Was ist ein Kanban-Board?"
+    },
+    {
+      "antwort": "Projektstartbesprechung",
+      "auswahl": [
+        "Projektstartbesprechung",
+        "Feierabendmeeting",
+        "Budgetabstimmung",
+        "Urlaubsplanung"
+      ],
+      "frage": "Was bedeutet Kick-off-Meeting?"
+    },
+    {
+      "antwort": "Zusammenfassung der Ergebnisse",
+      "auswahl": [
+        "Anforderungsdokument",
+        "Zusammenfassung der Ergebnisse",
+        "Meeting-Protokoll",
+        "Marketingplan"
+      ],
+      "frage": "Was ist der Projektabschlussbericht?"
+    }
+  ],
+  "Qualitätssichernde Maßnahmen": [
+    {
+      "antwort": "Fehlervermeidung",
+      "auswahl": [
+        "Fehlervermeidung",
+        "Fehlerproduktion",
+        "Kostensteigerung",
+        "Zeitverlust"
+      ],
+      "frage": "Was ist ein Ziel der Qualitätssicherung?"
+    },
+    {
+      "antwort": "Testverfahren",
+      "auswahl": [
+        "Testverfahren",
+        "Raten",
+        "Zufall",
+        "Ignorieren"
+      ],
+      "frage": "Welche Methode gehört zur Qualitätssicherung?"
+    },
+    {
+      "antwort": "Vollständige Abdeckung",
+      "auswahl": [
+        "Vollständige Abdeckung",
+        "Oberflächliche Prüfung",
+        "Einzelne Funktion",
+        "Zufällige Auswahl"
+      ],
+      "frage": "Was ist bei Software-Tests wichtig?"
+    },
+    {
+      "antwort": "ISO 9001",
+      "auswahl": [
+        "ISO 9001",
+        "ISO 14001",
+        "ISO 45001",
+        "ISO 27001"
+      ],
+      "frage": "Welcher Standard ist für Qualität relevant?"
+    },
+    {
+      "antwort": "Feedback-Schleifen",
+      "auswahl": [
+        "Feedback-Schleifen",
+        "Stillstand",
+        "Rückgang",
+        "Ignoranz"
+      ],
+      "frage": "Was gehört zur kontinuierlichen Verbesserung?"
+    },
+    {
+      "antwort": "ja",
+      "auswahl": [
+        "ja",
+        "nein",
+        "vielleicht",
+        "alles davon"
+      ],
+      "frage": "Ist das neu geaddet"
     }
   ]
 }
